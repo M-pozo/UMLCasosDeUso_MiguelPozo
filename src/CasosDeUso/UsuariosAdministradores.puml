@@ -1,23 +1,25 @@
 @startuml
 
-:Usuario : as A1
+left to right direction
 :Administrador : as A2
+
+usecase "Registrar usuario" as UC5
+usecase "Instalar programa" as UC6
+
+A2 -- UC5
+A2 -- UC6
+
+:Usuario : as A1
 
 usecase "Iniciar sesión" as UC1
 usecase "Recuperar contraseña" as UC2
 usecase "Modificar contraseña" as UC3
 usecase "Cerrar sesión" as UC4
-usecase "Registrar usuario" as UC5
-usecase "Instalar programa" as UC6
-
+A1 <|- A2
 A1 -- UC1
 A1 -- UC2
 A1 -- UC3
 A1 -- UC4
 
-A2 --|> A1
-
-A2 -- UC5
-A2 -- UC6
 
 @enduml
