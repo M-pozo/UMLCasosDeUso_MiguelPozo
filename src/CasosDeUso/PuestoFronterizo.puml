@@ -1,14 +1,13 @@
 @startuml
+left to right direction
+
+:Ciudadano extranjero: as A2
+usecase "Tomar huellas" as UC2
+A2 -- UC2
 
 :Ciudadano: as A1
-:Ciudadano extranjero: as A2
-
 usecase "Registrar entrada" as UC1
-usecase "Tomar huellas" as UC2
-
 A1 -- UC1
-A2 -- UC2
-UC1 ..> UC2 : <<extend>>
-A1 --|> A2
-
+UC1 <. UC2 : <<extend>>
+A1 <|- A2
 @enduml
