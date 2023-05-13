@@ -1,0 +1,22 @@
+@startuml
+
+:Cliente : as c
+
+
+usecase "Identificarse" as UC1
+usecase "Pagar" as UC2
+usecase "Elegir mensajero" as UC3
+usecase "Confirmar" as UC4
+usecase "Registrarse" as UC5
+usecase "Pagar con tarjeta" as UC6
+usecase "Pagar con transferencia" as UC7
+
+
+c -- UC1
+c -- UC2
+c -- UC3
+c -- UC4
+UC1 <.. UC5 : <<extend>>
+UC2 <|-- UC6
+UC2 <|-- UC7
+@enduml
