@@ -1,15 +1,21 @@
 @startuml
 
-:Cliente : as c
+
+left to right direction
+rectangle  {
+  :Cliente : as c
+
+  usecase "Pagar" as UC2
+  usecase "Elegir mensajero" as UC3
+  usecase "Confirmar" as UC4
+  usecase "Registrarse" as UC5
+  usecase "Pagar con tarjeta" as UC6
+  usecase "Pagar con transferencia" as UC7
+  usecase "Identificarse" as UC1
+
+}
 
 
-usecase "Identificarse" as UC1
-usecase "Pagar" as UC2
-usecase "Elegir mensajero" as UC3
-usecase "Confirmar" as UC4
-usecase "Registrarse" as UC5
-usecase "Pagar con tarjeta" as UC6
-usecase "Pagar con transferencia" as UC7
 
 
 c -- UC1
