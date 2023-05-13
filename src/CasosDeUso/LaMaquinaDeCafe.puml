@@ -1,16 +1,13 @@
 @startuml
 left to right direction
-rectangle  {
-  :Cliente : as c
 
-  usecase "Devolver dinero" as UC5
-  usecase "Cancelar" as UC4
-  usecase "Pedir producto" as UC3
-  usecase "Pedir Azucar" as UC2
-  usecase "Meter dinero" as UC1
-}
+:Cliente : as c
 
-
+usecase "Meter dinero" as UC1
+usecase "Pedir Azucar" as UC2
+usecase "Pedir producto" as UC3
+usecase "Cancelar" as UC4
+usecase "Devolver dinero" as UC5
 
 c -- UC1
 c -- UC2
@@ -18,6 +15,4 @@ c -- UC3
 c -- UC4
 UC3 ..> UC5 : <<Incluide>>
 UC4 ..> UC5 : <<Incluide>>
-
-
 @enduml
